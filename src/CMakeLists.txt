@@ -1,0 +1,18 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "usb_hid/usb_hid.c"
+        "ble_hid/ble_hid.c"
+        "led_rgb/led_rgb.c"
+    INCLUDE_DIRS
+        "."
+        "usb_hid"
+        "ble_hid"
+        "led_rgb"
+    REQUIRES
+        nvs_flash
+        bt
+        usb
+        espressif__usb_host_hid
+        espressif__led_strip
+)
